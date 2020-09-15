@@ -2,8 +2,33 @@
 <html lang="hu">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href=".css">
+        <title>Űdítőautomata</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="container automata">
+            <div class="bal"></div>  
+            <div class="jobb">
+                <div class="kepernyo"></div>
+            <div class="gombok" id="gombok"></div>
+                <button>OK</button>
+            </div>  
+        </div>
+        <script>
+            let gomb_tarolo=document.getElementById("gombok");
+            
+            for(let i = 1; i <= 9; i++){
+                gomb_tarolo.innerHTML += '<button onclick="katt(+i+)">' + i + '</button>';
+            }
+            function katt(szam){
+               // alert(szam);
+                document.getElementById("kepernyo").innerHTML = szam;    
+            }
+             let uditok =document.getElementById("bal");
+            for(let i = 0; i < 3; i++){
+               uditok.innerHTML += '<img src="cola.jpg">';
+            }
+        </script>   
     </body>
 </html>
